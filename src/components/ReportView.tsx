@@ -63,11 +63,6 @@ export const ReportView: React.FC<ReportViewProps> = ({ onNavigateTab, onSelectG
         {/* Left Column: Overview and Chapter Links */}
         <div className="report-left-col">
           <div className="overview-card">
-            <div className="overview-header-tag">
-              <span className="dot-live" />
-              LONG-RANGE TRANSPORTATION BLUEPRINT
-            </div>
-            
             <h2 className="overview-title">{PLAN_OVERVIEW.title}</h2>
             
             <p className="overview-lead-text">

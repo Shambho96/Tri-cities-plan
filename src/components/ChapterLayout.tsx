@@ -205,6 +205,43 @@ export const ChapterLayout: React.FC<ChapterLayoutProps> = ({
                 </div>
               )}
 
+              {/* Data Table */}
+              {currentSection.tableData && (
+                <div className="section-table-container">
+                  <div className="table-header-block">
+                    <h4 className="table-title">{currentSection.tableData.title}</h4>
+                    {currentSection.tableData.source && (
+                      <span className="table-source-tag">{currentSection.tableData.source}</span>
+                    )}
+                  </div>
+                  <div className="table-responsive-scroll">
+                    <table className="plan-custom-table">
+                      <thead>
+                        <tr>
+                          {currentSection.tableData.headers.map((h, hIdx) => (
+                            <th key={hIdx}>{h}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {currentSection.tableData.rows.map((row, rIdx) => {
+                          const isTotalRow = String(row[0]).toLowerCase().includes('total');
+                          return (
+                            <tr key={rIdx} className={isTotalRow ? 'table-row-total' : ''}>
+                              {row.map((cell, cIdx) => (
+                                <td key={cIdx} className={cIdx === 0 ? 'cell-primary' : 'cell-metric'}>
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
               {/* Section Pager / Navigation */}
               <footer className="article-pager-nav">
                 <button 

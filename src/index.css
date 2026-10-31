@@ -1155,6 +1155,7 @@ html.dark-theme .section-main-heading {
   font-size: 1.05rem;
   line-height: 1.78;
   color: var(--text-secondary);
+  white-space: pre-line;
 }
 
 .interactive-figure-wrapper {
@@ -2662,4 +2663,104 @@ html.dark-theme .footer-col-title {
   .forecast-summary-bar {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================================================
+   Data Tables (Table 1, Table 2, Table 3)
+   ========================================================================== */
+.section-table-container {
+  margin: 2.25rem 0;
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.table-header-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.15rem;
+  flex-wrap: wrap;
+}
+
+.table-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--brand-navy-900);
+}
+
+html.dark-theme .table-title {
+  color: #ffffff;
+}
+
+.table-source-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+}
+
+.table-responsive-scroll {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.plan-custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  text-align: left;
+  background: var(--bg-surface);
+}
+
+.plan-custom-table th {
+  background: var(--brand-navy-900);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  padding: 0.85rem 1rem;
+  white-space: nowrap;
+}
+
+html.dark-theme .plan-custom-table th {
+  background: #112036;
+}
+
+.plan-custom-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.plan-custom-table tr:hover td {
+  background: var(--bg-card-subtle);
+}
+
+.plan-custom-table .cell-primary {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.plan-custom-table .cell-metric {
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+}
+
+.plan-custom-table .table-row-total td {
+  font-weight: 800;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--brand-blue-600);
+  border-top: 2px solid var(--brand-blue-600);
 }

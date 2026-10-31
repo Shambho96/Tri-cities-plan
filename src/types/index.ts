@@ -34,6 +34,12 @@ export interface SectionContent {
     content: string;
   };
   hasInteractiveFigure?: 'figure1_map' | 'demographics_chart' | 'commuter_flow' | 'funding_breakdown';
+  tableData?: {
+    title: string;
+    headers: string[];
+    rows: (string | number)[][];
+    source?: string;
+  };
 }
 
 export interface ChapterData {
