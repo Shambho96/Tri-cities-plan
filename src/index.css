@@ -3248,3 +3248,162 @@ html.dark-theme .x-axis-label {
   margin-top: 1.5rem;
 }
 
+/* ==========================================================================
+   Coming Soon View (Chapters 3-5 & Appendices)
+   ========================================================================== */
+.coming-soon-wrapper {
+  max-width: 760px;
+  margin: 3.5rem auto 4.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.coming-soon-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html.dark-theme .coming-soon-card {
+  background: #0f1c30;
+  border-color: #1e293b;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.status-badge-pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+}
+
+html.dark-theme .status-badge-pulse {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.pulsing-radar-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2563eb;
+  box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+  animation: radarPulse 1.8s infinite;
+}
+
+html.dark-theme .pulsing-radar-dot {
+  background: #38bdf8;
+}
+
+@keyframes radarPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(37, 99, 235, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.coming-soon-icon-wrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: #2563eb;
+}
+
+html.dark-theme .coming-soon-icon-wrap {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+}
+
+.coming-soon-heading {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+html.dark-theme .coming-soon-heading {
+  color: #f8fafc;
+}
+
+.coming-soon-body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #475569;
+  max-width: 580px;
+  margin: 0 auto 2.25rem auto;
+}
+
+html.dark-theme .coming-soon-body {
+  color: #94a3b8;
+}
+
+.coming-soon-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cs-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cs-nav-btn:hover {
+  background: var(--bg-card-subtle);
+  border-color: var(--brand-blue-500);
+  transform: translateY(-1px);
+}
+
+.cs-nav-btn.next {
+  background: #2563eb;
+  color: #ffffff;
+  border: 1px solid #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.cs-nav-btn.next:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+

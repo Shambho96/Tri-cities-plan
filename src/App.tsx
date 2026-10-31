@@ -92,14 +92,14 @@ export function App() {
           />
         )}
 
-        {activeTab === 'today' && (
+        {(activeTab === 'today' || activeTab === 'tomorrow' || activeTab === 'funding' || activeTab === 'appendices') && (
           <ComingSoonView
+            tabId={activeTab}
             onNavigateTab={handleNavigateTab}
-            onDownloadChapter={handleDownloadPdf}
           />
         )}
 
-        {activeTab !== 'report' && activeTab !== 'today' && currentChapterData && (
+        {(activeTab === 'introduction' || activeTab === 'trends') && currentChapterData && (
           <ChapterLayout
             chapter={currentChapterData}
             activeSectionId={activeSectionId}
