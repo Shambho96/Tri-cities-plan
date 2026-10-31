@@ -33,7 +33,14 @@ export interface SectionContent {
     title: string;
     content: string;
   };
-  hasInteractiveFigure?: 'figure1_map' | 'demographics_chart' | 'commuter_flow' | 'funding_breakdown';
+  hasInteractiveFigure?: 
+    | 'figure1_map' 
+    | 'demographics_chart' 
+    | 'commuter_flow' 
+    | 'funding_breakdown'
+    | 'density_maps'
+    | 'shift_share_chart'
+    | 'ej_composite_map';
   tableData?: {
     title: string;
     headers: string[];

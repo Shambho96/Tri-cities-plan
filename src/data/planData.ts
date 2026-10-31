@@ -231,11 +231,9 @@ export const CHAPTERS_DATA: ChapterData[] = [
         id: "pop-density",
         title: "Population, Employment, and Activity Density",
         text: [
-          "The following maps illustrate existing population, employment, and activity density by block group in the Tri-Cities region and beyond. Population estimates are drawn from the American Community Survey (ACS) 2023 5-Year Estimates. Employment estimates are drawn from the 2023 Longitudinal Employer-Household Dynamics (LEHD) Origin-Destination Employment Statistics (LODES) Workplace Area Characteristics (WAC) dataset.",
-          "Population Density:\nFigure 3 shows population density (residents per square mile) across the region. Population density is highest in Petersburg, Colonial Heights, and Hopewell, with additional concentrations in Chesterfield, Dinwiddie, and Prince George Counties, particularly along the I-95 and I-85 corridors and near major institutions such as Virginia State University (VSU) and Fort Lee. Notable exceptions to this pattern exist within eastern Hopewell and southwestern Petersburg, where lower population densities are due to industrial, commercial, and park land uses rather than rural or undeveloped land.\n\nTCAMPO Population Density by Block Group\nFigure 3. TCAMPO Population Density by Block Group (Source: 2023 ACS 5-Year)",
-          "Employment Density:\nFigure 4 illustrates the region’s employment density (jobs per square mile). Employment is primarily concentrated along the I-95 and I-85 corridors through Dinwiddie, Colonial Heights, and Petersburg, with additional dense clusters just north of the TCAMPO boundary in Chester and Meadowville. Other areas of high employment density are evident in the historic downtown cores of Petersburg and Hopewell, near VSU in Ettrick, at Southpark Mall in Colonial Heights, and along arterial principal arterial corridors such as South Crater Road (US-301), Oaklawn Boulevard (VA-36), and East Hundred Road (SR-10). Rural portions of the region, particularly to the west, south, and east, show minimal employment density. Due to limitations in federal jobs reporting within the LEHD dataset, employment associated with Fort Lee is not captured in this map.\n\nTCAMPO Employment Density by Block Group\nFigure 4. TCAMPO Employment Density by Block Group (Source: 2023 LEHD)",
-          "Activity Density:\nFigure 5 combines the two measures above to show activity density (residents plus jobs per square mile) across the region. Activity density is highest where population and employment concentrations overlap, most notably in Colonial Heights, Hopewell, and Petersburg and along the I-95 and I-85 corridors. High activity is also illustrated near VSU and Fort Lee. As with population and employment densities individually, activity density is lowest in the rural portions of the region to the west, south, and east.\n\nTCAMPO Activity Density by Block Group\nFigure 5. TCAMPO Activity Density by Block Group (Source: 2023 ACS 5-Year, 2023 LEHD)"
-        ]
+          "The following maps illustrate existing population, employment, and activity density by block group in the Tri-Cities region and beyond. Population estimates are drawn from the American Community Survey (ACS) 2023 5-Year Estimates. Employment estimates are drawn from the 2023 Longitudinal Employer-Household Dynamics (LEHD) Origin-Destination Employment Statistics (LODES) Workplace Area Characteristics (WAC) dataset."
+        ],
+        hasInteractiveFigure: "density_maps"
       },
       {
         id: "pop-household-trends",
@@ -250,22 +248,22 @@ export const CHAPTERS_DATA: ChapterData[] = [
       },
       {
         id: "shift-share-employment",
-        title: "Shift Share Employment Growth by BLS Supersectors",
+        title: "Shift-Share Employment Growth by BLS Supersector",
         text: [
           "In this section, employment growth in the Tri-Cities region is evaluated across all BLS supersectors using shift-share analysis. Supersectors are high-level industry groupings used by BLS for the QCEW program, aggregating employment across related two-digit NAICS sectors to provide a wider view of economic activity in an area. These industries can be further grouped into the Goods-Producing and Service-Providing domains.",
-          "Net employment in the Tri-Cities region increased across most major industry supersectors between 2019 and 2023, although the magnitude and causes of growth varied by sector. Shift-share analysis decomposes regional employment change into three components:\n\n• National Growth (NGC): Measures growth attributable to overall national employment trends.\n• Industrial Mix (IMC): Reflects industry-specific national growth patterns.\n• Local Share (LSC): Captures competitive growth unique to the Tri-Cities region.",
-          "The analysis revealed that Trade, Transportation & Utilities was the region's largest source of net employment growth between 2019 and 2023, adding 950 jobs (NGC: +585, IMC: +158, LSC: +208). The strong positive local growth in both Trade, Transportation & Utilities and Manufacturing aligns with the region's location along the I-95 and I-85 corridors and its growing role as a goods movement and freight logistics hub.",
-          "TCAMPO Shift-Share by Supersector vs. National, 2019-2023\nFigure 12. TCAMPO Shift-Share by Supersector vs. National, 2019-2023"
-        ]
+          "Net employment in the Tri-Cities region increased across most major industry supersectors between 2019 and 2023, although the magnitude and causes of growth varied by sector. Shift-share analysis decomposes regional employment change into three components:",
+          "The analysis revealed that Trade, Transportation & Utilities was the region's largest source of net employment growth between 2019 and 2023, adding 950 jobs (NGC: +585, IMC: +158, LSC: +208). The strong positive local growth in both Trade, Transportation & Utilities and Manufacturing aligns with the region's location along the I-95 and I-85 corridors and its growing role as a goods movement and freight logistics hub."
+        ],
+        hasInteractiveFigure: "shift_share_chart"
       },
       {
         id: "demographic-profiles",
         title: "Demographic Profiles",
         text: [
           "This section summarizes the Environmental Justice (EJ) analysis which is incorporated into TCAMPO’s prioritization process for projects considered for inclusion in Plan2050. The analysis designates EJ Areas of Concern, defined as census block groups having relatively higher concentrations of residents or households that may have limited access to viable transportation choices. Identifying areas where these populations are concentrated helps ensure that transportation investments are planned and prioritized in a way that promotes equitable access across the region.",
-          "For this analysis, six EJ indicators are derived from 2023 ACS 5-Year Estimates: minority and low-income populations, persons with limited English proficiency, persons with disabilities, elderly persons, and households without access to a vehicle. Each indicator is reclassified into an ordinal vulnerability score (1–3) using tertile breaks. The scores are summed to produce a composite vulnerability index (ranging from 6 to 18), then classified into a final three-level Environmental Justice Composite Index.",
-          "Composite EJ Index by Block Group\nFigure 13. Composite EJ Index by Block Group (Source: 2023 ACS 5-Year Estimates)"
-        ]
+          "For this analysis, six EJ indicators are derived from 2023 ACS 5-Year Estimates: minority and low-income populations, persons with limited English proficiency, persons with disabilities, elderly persons, and households without access to a vehicle. Each indicator is reclassified into an ordinal vulnerability score (1–3) using tertile breaks. The scores are summed to produce a composite vulnerability index (ranging from 6 to 18), then classified into a final three-level Environmental Justice Composite Index."
+        ],
+        hasInteractiveFigure: "ej_composite_map"
       },
       {
         id: "socioeconomic-forecasts",

@@ -2764,3 +2764,487 @@ html.dark-theme .plan-custom-table th {
   color: var(--brand-blue-600);
   border-top: 2px solid var(--brand-blue-600);
 }
+
+/* ==========================================================================
+   Chapter 2: Interactive Figures & Visualizations (Trends & Forecasts)
+   ========================================================================== */
+.interactive-figure-wrapper {
+  margin: 1.75rem 0;
+  width: 100%;
+}
+
+/* Framed Figure Box (Matches Images 1, 2, 3, 4, 5) */
+.figure-framed-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+html.dark-theme .figure-framed-box {
+  background: #0f1c30;
+  border-color: #1e293b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.figure-framed-box:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+html.dark-theme .figure-framed-box:hover {
+  border-color: #334155;
+}
+
+.figure-framed-header {
+  padding: 1.5rem 1.75rem 1rem 1.75rem;
+}
+
+.figure-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+html.dark-theme .figure-section-title {
+  color: #38bdf8;
+}
+
+.figure-narrative {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #334155;
+  margin: 0;
+}
+
+html.dark-theme .figure-narrative {
+  color: #94a3b8;
+}
+
+/* Map visual container */
+.density-map-visual {
+  width: 100%;
+  background: #f8fafc;
+  position: relative;
+  border-top: 1px solid #f1f5f9;
+}
+
+html.dark-theme .density-map-visual {
+  background: #0b1523;
+  border-top-color: #1e293b;
+}
+
+.density-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Figure Caption Strip */
+.figure-caption-strip {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 0.65rem 1.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+html.dark-theme .figure-caption-strip {
+  background: #0d1726;
+  border-top-color: #1e293b;
+  color: #94a3b8;
+}
+
+.figure-caption-strip em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Tab Switcher for Figure 3, 4, 5 */
+.density-tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.density-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.density-tab-btn:hover {
+  background: var(--bg-card-subtle);
+  color: var(--text-primary);
+  border-color: var(--brand-blue-500);
+}
+
+.density-tab-btn.active.all {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.25);
+}
+
+.density-tab-btn.active.pop {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+}
+
+.density-tab-btn.active.emp {
+  background: #ea580c;
+  color: #ffffff;
+  border-color: #ea580c;
+  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.25);
+}
+
+.density-tab-btn.active.act {
+  background: #7c3aed;
+  color: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.25);
+}
+
+/* Shift-Share 3 Component Cards (Image 4) */
+.shift-share-container {
+  margin: 1.5rem 0;
+}
+
+.shift-components-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+@media (max-width: 768px) {
+  .shift-components-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.shift-component-card {
+  background: #f0f7ff;
+  border: 1.5px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 1.15rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+html.dark-theme .shift-component-card {
+  background: rgba(30, 58, 138, 0.15);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.shift-component-card:hover {
+  transform: translateY(-2px);
+  border-color: #60a5fa;
+}
+
+.component-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.35rem;
+}
+
+html.dark-theme .component-title {
+  color: #38bdf8;
+}
+
+.component-desc {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #334155;
+  margin: 0;
+}
+
+html.dark-theme .component-desc {
+  color: #cbd5e1;
+}
+
+/* Main Shift-Share Chart Card (Figure 12) */
+.shift-chart-framed-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem 0.75rem 1.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+}
+
+html.dark-theme .shift-chart-framed-card {
+  background: #0f1c30;
+  border-color: #1e293b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.chart-header-block {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.chart-main-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+html.dark-theme .chart-main-title {
+  color: #f1f5f9;
+}
+
+.chart-subtitle {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.axis-legend-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  padding-right: 65px;
+}
+
+.legend-items {
+  display: flex;
+  gap: 1.15rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #334155;
+  background: #f8fafc;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+html.dark-theme .legend-items {
+  background: #0b1523;
+  border-color: #1e293b;
+  color: #cbd5e1;
+}
+
+.legend-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+}
+
+.color-sq {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.color-sq.ngc {
+  background: #2563eb;
+}
+
+.color-sq.imc {
+  background: #ea580c;
+}
+
+.color-sq.lsc {
+  background: #16a34a;
+}
+
+.diamond-symbol {
+  color: #0f172a;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+html.dark-theme .diamond-symbol {
+  color: #f8fafc;
+}
+
+/* Stacked Rows in Shift-Share */
+.chart-rows-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.shift-row-item {
+  display: grid;
+  grid-template-columns: 210px 1fr 65px;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.shift-row-item:hover,
+.shift-row-item.hovered {
+  background: #f8fafc;
+}
+
+html.dark-theme .shift-row-item:hover,
+html.dark-theme .shift-row-item.hovered {
+  background: #132238;
+}
+
+.sector-name-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+html.dark-theme .sector-name-label {
+  color: #e2e8f0;
+}
+
+.diverging-bar-track {
+  position: relative;
+  height: 20px;
+  background: #f1f5f9;
+  border-radius: 3px;
+  overflow: visible;
+}
+
+html.dark-theme .diverging-bar-track {
+  background: #1e293b;
+}
+
+.zero-line {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 1.5px;
+  background: #475569;
+  z-index: 5;
+}
+
+.segment-bar {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  border-radius: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.segment-bar.ngc-bar {
+  background: #2563eb;
+}
+
+.segment-bar.imc-bar {
+  background: #ea580c;
+}
+
+.segment-bar.lsc-bar {
+  background: #16a34a;
+}
+
+.shift-row-item:hover .segment-bar {
+  filter: brightness(1.08);
+}
+
+.net-diamond-marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #0f172a;
+  font-size: 0.9rem;
+  line-height: 1;
+  font-weight: bold;
+  z-index: 10;
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff;
+}
+
+html.dark-theme .net-diamond-marker {
+  color: #ffffff;
+  text-shadow: 0 0 2px #000, 0 0 4px #000;
+}
+
+.net-change-value {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.net-change-value.pos {
+  color: #0f172a;
+}
+
+html.dark-theme .net-change-value.pos {
+  color: #38bdf8;
+}
+
+.net-change-value.neg {
+  color: #dc2626;
+}
+
+/* X-Axis Ticks below chart */
+.x-axis-ticks {
+  position: relative;
+  height: 20px;
+  margin-top: 0.5rem;
+  margin-left: 218px;
+  margin-right: 65px;
+  font-size: 0.75rem;
+  color: #64748b;
+  font-family: var(--font-mono);
+  border-top: 1px solid #cbd5e1;
+  padding-top: 4px;
+}
+
+html.dark-theme .x-axis-ticks {
+  border-top-color: #334155;
+  color: #94a3b8;
+}
+
+.x-axis-ticks span {
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.x-axis-label {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  margin-top: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+html.dark-theme .x-axis-label {
+  color: #94a3b8;
+}
+
+/* Figure 13 Composite EJ Box (Image 5) */
+.ej-composite-box {
+  margin-top: 1.5rem;
+}
+

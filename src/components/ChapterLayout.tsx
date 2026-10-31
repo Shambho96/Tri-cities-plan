@@ -5,6 +5,9 @@ import { InteractiveMapFigure } from './InteractiveMapFigure';
 import { DemographicsChart } from './DemographicsChart';
 import { CommuterFlowFigure } from './CommuterFlowFigure';
 import { FundingBreakdown } from './FundingBreakdown';
+import { DensityMapsFigure } from './DensityMapsFigure';
+import { ShiftShareChart } from './ShiftShareChart';
+import { EJCompositeMapFigure } from './EJCompositeMapFigure';
 
 interface ChapterLayoutProps {
   chapter: ChapterData;
@@ -202,6 +205,24 @@ export const ChapterLayout: React.FC<ChapterLayoutProps> = ({
               {currentSection.hasInteractiveFigure === 'funding_breakdown' && (
                 <div className="interactive-figure-wrapper">
                   <FundingBreakdown />
+                </div>
+              )}
+
+              {currentSection.hasInteractiveFigure === 'density_maps' && (
+                <div className="interactive-figure-wrapper">
+                  <DensityMapsFigure />
+                </div>
+              )}
+
+              {currentSection.hasInteractiveFigure === 'shift_share_chart' && (
+                <div className="interactive-figure-wrapper">
+                  <ShiftShareChart />
+                </div>
+              )}
+
+              {currentSection.hasInteractiveFigure === 'ej_composite_map' && (
+                <div className="interactive-figure-wrapper">
+                  <EJCompositeMapFigure />
                 </div>
               )}
 
