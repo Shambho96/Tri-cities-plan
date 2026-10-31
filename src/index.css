@@ -2620,24 +2620,45 @@ html.dark-theme .footer-col-title {
 }
 
 @media (max-width: 600px) {
+  .chapter-hero-banner {
+    min-height: 190px;
+  }
+
+  .hero-banner-content {
+    padding: 1.5rem 1.25rem;
+  }
+
   .chapter-hero-title {
-    font-size: 1.95rem;
+    font-size: 1.65rem;
+  }
+
+  .chapter-hero-subtitle {
+    font-size: 0.85rem;
   }
 
   .overview-title {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 
   .coming-soon-heading {
-    font-size: 2.15rem;
+    font-size: 1.95rem;
+  }
+
+  .coming-soon-card {
+    padding: 2.25rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .coming-soon-body {
+    font-size: 0.95rem;
   }
 
   .section-article {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1rem;
   }
 
   .overview-card {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1rem;
   }
 
   .showcase-graphic-card {
@@ -2662,6 +2683,76 @@ html.dark-theme .footer-col-title {
 
   .forecast-summary-bar {
     grid-template-columns: 1fr;
+  }
+
+  /* Shift-Share Chart Mobile Responsive (Smooth Horizontal Scroll) */
+  .shift-chart-framed-card {
+    padding: 1.25rem 1rem 0.75rem 1rem;
+  }
+
+  .shift-chart-body {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.75rem;
+  }
+
+  .chart-rows-stack,
+  .x-axis-ticks {
+    min-width: 530px;
+  }
+
+  .axis-legend-row {
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .legend-items {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  /* Modal on Mobile Screens */
+  .modal-backdrop {
+    padding: 0.75rem;
+  }
+
+  .modal-container {
+    max-height: 94vh;
+    border-radius: 16px;
+  }
+
+  .modal-header-banner {
+    padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  }
+
+  .modal-goal-title {
+    font-size: 1.3rem;
+  }
+
+  .modal-body {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .modal-footer {
+    padding: 1rem 1.25rem;
+  }
+
+  /* Density Tabs on Mobile */
+  .density-tab-btn {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.75rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-heading {
+    font-size: 1.05rem;
+  }
+
+  .header-inner {
+    padding: 0 0.75rem;
   }
 }
 
