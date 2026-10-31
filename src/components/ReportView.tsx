@@ -109,10 +109,7 @@ export const ReportView: React.FC<ReportViewProps> = ({ onNavigateTab, onSelectG
                 className="chapter-btn"
                 onClick={() => onNavigateTab('today')}
               >
-                <div className="btn-label-with-tag">
-                  <span className="chapter-label">Chapter 3: System Today</span>
-                  <span className="status-mini-tag">Finalizing</span>
-                </div>
+                <span className="chapter-label">Chapter 3: System Today</span>
                 <ChevronRight size={18} className="arrow-slide" />
               </button>
 
@@ -120,10 +117,7 @@ export const ReportView: React.FC<ReportViewProps> = ({ onNavigateTab, onSelectG
                 className="chapter-btn"
                 onClick={() => onNavigateTab('tomorrow')}
               >
-                <div className="btn-label-with-tag">
-                  <span className="chapter-label">Chapter 4: System Tomorrow</span>
-                  <span className="future-mini-tag">Vision</span>
-                </div>
+                <span className="chapter-label">Chapter 4: System Tomorrow</span>
                 <ChevronRight size={18} className="arrow-slide" />
               </button>
 
@@ -131,10 +125,7 @@ export const ReportView: React.FC<ReportViewProps> = ({ onNavigateTab, onSelectG
                 className="chapter-btn"
                 onClick={() => onNavigateTab('funding')}
               >
-                <div className="btn-label-with-tag">
-                  <span className="chapter-label">Chapter 5: Funding</span>
-                  <span className="fiscal-mini-tag">$1.24B</span>
-                </div>
+                <span className="chapter-label">Chapter 5: Funding</span>
                 <ChevronRight size={18} className="arrow-slide" />
               </button>
 
