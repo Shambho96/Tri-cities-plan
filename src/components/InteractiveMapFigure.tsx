@@ -3,6 +3,7 @@ import { Info, Compass } from 'lucide-react';
 import { PLAN_OVERVIEW } from '../data/planData';
 
 export const InteractiveMapFigure: React.FC = () => {
+  const [viewMode, setViewMode] = useState<'official' | 'interactive'>('official');
   const [selectedJurisdiction, setSelectedJurisdiction] = useState<string>(PLAN_OVERVIEW.jurisdictions[0].name);
   const [activeLayer, setActiveLayer] = useState<'all' | 'interstates' | 'waterways'>('all');
 
@@ -14,33 +15,56 @@ export const InteractiveMapFigure: React.FC = () => {
         <div className="figure-title-group">
           <div className="figure-badge">
             <Compass size={14} className="spin-slow" />
-            FIGURE 1: INTERACTIVE REGIONAL ATLAS
+            FIGURE 1: REGIONAL MPO BOUNDARIES
           </div>
-          <h4>TCAMPO Planning Area & Member Jurisdictions</h4>
-          <p className="figure-subtext">Click any jurisdiction or corridor to inspect demographic and transit metrics</p>
+          <h4>Greater Richmond Region and Metropolitan Planning Organization Boundaries</h4>
+          <p className="figure-subtext">TCAMPO in relation to the Richmond MSA, RRTPO, and surrounding jurisdictions</p>
         </div>
 
-        <div className="figure-layer-pills">
+        <div className="figure-layer-pills" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           <button 
-            className={`layer-pill ${activeLayer === 'all' ? 'active' : ''}`}
-            onClick={() => setActiveLayer('all')}
+            className={`layer-pill ${viewMode === 'official' ? 'active' : ''}`}
+            onClick={() => setViewMode('official')}
           >
-            All Systems
+            Official Figure 1 Map
           </button>
           <button 
-            className={`layer-pill ${activeLayer === 'interstates' ? 'active' : ''}`}
-            onClick={() => setActiveLayer('interstates')}
+            className={`layer-pill ${viewMode === 'interactive' ? 'active' : ''}`}
+            onClick={() => setViewMode('interactive')}
           >
-            Corridors (I-95/85/295)
+            Interactive Localities Map
           </button>
-          <button 
-            className={`layer-pill ${activeLayer === 'waterways' ? 'active' : ''}`}
-            onClick={() => setActiveLayer('waterways')}
-          >
-            Rivers & Confluence
-          </button>
+          {viewMode === 'interactive' && (
+            <div style={{ display: 'flex', gap: '4px', marginLeft: 'auto' }}>
+              {(['all', 'interstates', 'waterways'] as const).map(l => (
+                <button
+                  key={l}
+                  className={`layer-pill ${activeLayer === l ? 'active' : ''}`}
+                  onClick={() => setActiveLayer(l)}
+                  style={{ textTransform: 'capitalize', fontSize: '0.75rem' }}
+                >
+                  {l}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
+
+      {viewMode === 'official' ? (
+        <div className="section-document-figure-card animate-fade-in" style={{ margin: '1rem 0', boxShadow: 'none' }}>
+          <div className="figure-img-container">
+            <img 
+              src="/assets/figures/fig01_mpo_boundaries.jpg" 
+              alt="Figure 1: Greater Richmond Region and Metropolitan Planning Organization Boundaries" 
+              className="figure-rendered-img"
+            />
+          </div>
+          <div className="figure-card-caption">
+            <strong>Figure 1:</strong> Greater Richmond Region and Metropolitan Planning Organization Boundaries, depicting TCAMPO (blue), Richmond Transportation Planning Organization (RRTPO, yellow), and the Richmond MSA border (purple). Source: U.S. Census Bureau, Esri, TomTom, Garmin, USGS.
+          </div>
+        </div>
+      ) : (
 
       <div className="figure-grid">
         {/* SVG Interactive Map */}
@@ -238,6 +262,7 @@ export const InteractiveMapFigure: React.FC = () => {
           </div>
         </div>
       </div>
+      )}
     </div>
   );
 };

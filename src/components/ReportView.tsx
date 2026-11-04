@@ -63,6 +63,12 @@ export const ReportView: React.FC<ReportViewProps> = ({ onNavigateTab, onSelectG
         {/* Left Column: Overview and Chapter Links */}
         <div className="report-left-col">
           <div className="overview-card">
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+              <MpoLogo variant="card" size="sm" />
+              <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 700, letterSpacing: '0.05em' }}>
+                REGIONAL HORIZON 2050
+              </span>
+            </div>
             <h2 className="overview-title">{PLAN_OVERVIEW.title}</h2>
             
             <p className="overview-lead-text">
@@ -143,38 +149,17 @@ export const ReportView: React.FC<ReportViewProps> = ({ onNavigateTab, onSelectG
         {/* Right Column: Visual Showcase Graphic */}
         <div className="report-right-col">
           <div className="showcase-graphic-card">
-            {/* Visual Header / Chevrons Background with Bridge Imagery */}
-            <div className="graphic-backdrop-wrapper">
-              <div className="angled-bridge-layer">
-                <img 
-                  src="/assets/bridge.jpg" 
-                  alt="Tri-Cities Regional Bridge and River Corridor" 
-                  className="bridge-showcase-img"
-                />
-                <div className="bridge-overlay-gradient" />
-              </div>
-
-              {/* Chevron Overlay Shape */}
-              <div className="chevron-accent-lines">
-                <svg viewBox="0 0 400 350" className="chevron-svg" preserveAspectRatio="none">
-                  <polygon points="0,0 240,0 340,160 240,350 0,350" fill="rgba(11, 26, 48, 0.88)" />
-                  <path d="M 240,0 L 340,160 L 240,350" stroke="#00b4d8" strokeWidth="4" fill="none" opacity="0.9" />
-                  <path d="M 225,0 L 325,160 L 225,350" stroke="#38bdf8" strokeWidth="1.5" strokeDasharray="6 4" fill="none" opacity="0.6" />
-                </svg>
-              </div>
-
-              {/* Graphic Title Overlay */}
-              <div className="graphic-title-block">
-                <div className="mpo-top-title">TRI-CITIES AREA MPO</div>
-                <div className="mpo-sub-acronym">(TCAMPO)</div>
-                <div className="divider-glow" />
-                <div className="plan-long-title">LONG-RANGE TRANSPORTATION PLAN</div>
-                <div className="plan-version-badge">(PLAN2050)</div>
-              </div>
-
-              {/* Stylized MPO Logo Card at Bottom Left */}
-              <div className="graphic-mpo-emblem-card">
-                <MpoLogo variant="card" size="md" />
+            {/* Official Adopted PLAN2050 Document Cover Image */}
+            <div className="official-report-cover-wrapper">
+              <img 
+                src="/assets/plan2050-report-cover.png" 
+                srcSet="/assets/plan2050-report-cover.png 1x, /assets/plan2050-report-cover-2x.png 2x"
+                alt="Tri-Cities Area MPO (TCAMPO) Long-Range Transportation Plan (PLAN2050) Official Cover" 
+                className="official-report-cover-img"
+              />
+              <div className="report-cover-badge-pill">
+                <span className="badge-pulse-dot" />
+                <span>Adopted Plan Document</span>
               </div>
             </div>
 

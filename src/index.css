@@ -566,6 +566,57 @@ html.dark-theme .quick-metric-item .metric-val {
   position: relative;
 }
 
+.official-report-cover-wrapper {
+  position: relative;
+  width: 100%;
+  background: #0b1a30;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justifyContent: center;
+  border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+}
+
+.official-report-cover-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.showcase-graphic-card:hover .official-report-cover-img {
+  transform: scale(1.025);
+}
+
+.report-cover-badge-pill {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(11, 26, 48, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: #38bdf8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.badge-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+}
+
 .graphic-backdrop-wrapper {
   position: relative;
   height: 290px;
@@ -4457,6 +4508,108 @@ html.dark-theme .search-sec-title {
     font-size: 0.9rem;
   }
 }
+
+/* ==========================================================================
+   Document Figure Cards (PLAN2050 Official Figures)
+   ========================================================================== */
+.section-document-figure-card {
+  margin: 2.25rem 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg, 14px);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+html.dark-theme .section-document-figure-card {
+  background: #0f172a;
+  border-color: rgba(56, 189, 248, 0.2);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+.section-document-figure-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.figure-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+}
+
+html.dark-theme .figure-card-header {
+  background: #131e33;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.figure-card-tag {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--brand-navy-900);
+}
+
+html.dark-theme .figure-card-tag {
+  color: #38bdf8;
+}
+
+.figure-card-source {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-subtle);
+}
+
+.figure-img-container {
+  position: relative;
+  width: 100%;
+  background: #0b111e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.figure-rendered-img {
+  width: 100%;
+  max-height: 680px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.figure-card-caption {
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-subtle);
+}
+
+html.dark-theme .figure-card-caption {
+  background: #0b1322;
+  color: #94a3b8;
+  border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+.figure-card-caption strong {
+  color: var(--text-primary);
+}
+
+html.dark-theme .figure-card-caption strong {
+  color: #e2e8f0;
+}
+
 
 
 
